@@ -1,0 +1,79 @@
+<!-- 
+<section class="col-3">
+    <h2>Inicio de sesion</h2>
+    <section class="form-group">
+      <label for="username">Username:</label>
+      <input type="text" class="form-control" id="username">
+    </section>
+    <section class="form-group">
+      <label for="password">Password:</label>
+      <input type="text" class="form-control" id="password">
+    </section>
+    <button mat-raised-button color="primary" (click)="login()">Enviar</button>
+
+    <section>
+      
+      <div class="example-button-row">
+        <div class="example-flex-container">
+          <div class="example-button-container">
+            <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
+              <mat-icon>menu</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+</section> -->
+<section class="container">
+  <p>Primer Valor: <input [(ngModel)]="va1" type="number"></p>
+  <p>Segundo Valor: <input [(ngModel)]="va2" type="number"></p>
+<mat-card class="result">
+  <mat-card-content>
+    <section class="example-section">
+      <mat-slide-toggle
+          [(ngModel)]="sum"
+          class="example-margin"
+          [color]="color"
+          [checked]="checked"
+          [disabled]="disabled">
+        Sumar
+      </mat-slide-toggle>
+      <mat-slide-toggle
+      [(ngModel)]="rest"
+          class="example-margin"
+          [color]="color"
+          [checked]="checked"
+          [disabled]="disabled">
+        Restar
+      </mat-slide-toggle>
+      <mat-slide-toggle
+      [(ngModel)]="multi"
+          class="example-margin"
+          [color]="color"
+          [checked]="checked"
+          [disabled]="disabled">
+        Multiplicar
+      </mat-slide-toggle>
+      <mat-slide-toggle
+      [(ngModel)]="div"
+          class="example-margin"
+          [color]="color"
+          [checked]="checked"
+          [disabled]="disabled">
+        Dividir
+      </mat-slide-toggle>
+    </section>
+  
+  </mat-card-content>
+</mat-card> <br> <br>
+
+
+<button mat-raised-button color="" (click)="calcular()">Calcular</button>
+
+<section *ngIf="aplicar" class="respueta">
+  <p *ngIf="sum">La suma es:{{va1+va2}}</p>
+  <p *ngIf="rest">La resta es:{{va1-va2}}</p>
+  <p *ngIf="multi">La multiplicacion es:{{va1*va2}}</p>
+  <p *ngIf="div">La division es:{{va1/va2}}</p>
+</section>
+
